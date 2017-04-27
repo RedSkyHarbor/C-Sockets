@@ -68,13 +68,7 @@ int main(int argc, char *argv[]){
 			printf("Error receiving message!\n");
 		}
 
-		//TODO Read what is in the buffer, handle two cases
-		//check header: is it a request or an update?
-		//handle each case.
-
-
 		//Fill the buffer
-		//TODO This is not what needs to be sent back, this is temporary!
 		sprintf(buffer, "ACK %d", messageCount++); 
 
 		//Send a message (the buffer) back to the client
@@ -89,25 +83,8 @@ int main(int argc, char *argv[]){
 		}
 	}
 
-	//TODO Connectionless calls
-	//read "datagram" from serverFD
-	//Write reply to serverFD specifying client address and port number
-	//while true read from serverFD to receive message
-	//send message back to client from serverFD
-
-	//Close
 	close(serverFD);
 
 	return 0;
 }
 
-
-//1 Server prints its ouwn initial routing table
-
-//2 Server waits for at least two messages from client
-//  Message may be either a request for a routing update from the server or an asynchronous update
-//  The information in the message header should allow the server to distinguish btwn the two cases
-
-//3 Server prints the update it received from client
-
-//4 Include "trace" output analogous to that for the client specified before.

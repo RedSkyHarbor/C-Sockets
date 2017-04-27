@@ -98,16 +98,3 @@ int main(int argc, char * argv[]){
 	return 0;
 }
 
-
-
-
-
-//1 Client proints its own initial routing table
-
-//2 Client requests routing update from server, Server responds with its initial table. 
-//  Client prints servers response.
-
-//3 Client advertises its routing update to the server asynchronously.
-
-//4 Include "trace" output on the screen prior to the client sending requests and after receiving
-//  Responses so tthat it is clearer what the client is doing. (read document!)
